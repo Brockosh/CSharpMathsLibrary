@@ -33,13 +33,10 @@ namespace CSharpMathsLibrary
             set { colour = (colour & 0xffffff00) | (UInt32)value; }
         }
 
-
         public Colour(byte r, byte g, byte b, byte a)
         {
             colour = ((UInt32)r << 24) | ((UInt32)g << 16) | ((UInt32)b << 8) | a;
         }
-
-
     }
 }
 
