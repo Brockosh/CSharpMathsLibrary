@@ -3,7 +3,6 @@
     public struct Vector3
     {
 
-        //Still need to add cross and dot product.
 
         public float x;
         public float y;
@@ -119,9 +118,14 @@
         public void Normalize()
         {
             float m = Magnitude();
-            x *= m;
-            y *= m;
-            z *= m;
+
+            // Prevent division by zero
+            if (m > 0)
+            {
+                x /= m;
+                y /= m;
+                z /= m;
+            }
         }
 
         public Vector3 GetNormalised()
