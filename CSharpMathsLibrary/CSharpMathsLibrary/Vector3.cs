@@ -133,6 +133,7 @@
             return (this / Magnitude());
         }
 
+       
 
     }
 }
