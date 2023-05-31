@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpMathsLibrary
+namespace MathClasses
 {
     public struct Colour
     {
@@ -39,5 +39,3 @@ namespace CSharpMathsLibrary
         }
     }
 }
-
-

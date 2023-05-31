@@ -1,4 +1,10 @@
-﻿namespace CSharpMathsLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MathClasses
 {
     public struct Vector4
     {
@@ -54,9 +60,9 @@
         public static bool operator ==(Vector4 v1, Vector4 v2)
         {
             return Math.Abs(v1.x - v2.x) < Tolerance &&
-                   Math.Abs(v1.y - v2.y) < Tolerance &&
-                   Math.Abs(v1.z - v2.z) < Tolerance &&
-                   Math.Abs(v1.w - v2.w) < Tolerance;
+                    Math.Abs(v1.y - v2.y) < Tolerance &&
+                    Math.Abs(v1.z - v2.z) < Tolerance &&
+                    Math.Abs(v1.w - v2.w) < Tolerance;
         }
 
         public static bool operator !=(Vector4 v1, Vector4 v2)
@@ -139,4 +145,5 @@
 
 
     }
+
 }

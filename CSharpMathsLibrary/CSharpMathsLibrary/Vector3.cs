@@ -1,9 +1,13 @@
-﻿namespace CSharpMathsLibrary
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MathClasses
 {
     public struct Vector3
     {
-
-
         public float x;
         public float y;
         public float z;
@@ -89,9 +93,9 @@
 
             Vector3 a = GetNormalised();
             Vector3 b = other.GetNormalised();
-            
+
             float d = a.x * b.x + a.y * b.y + a.z * b.z;
-            
+
             return (float)Math.Acos(d);
         }
 
@@ -118,9 +122,7 @@
         public void Normalize()
         {
             float m = Magnitude();
-
-            // Prevent division by zero
-            if (m > 0)
+            if (m > 0) // Prevent divide by zero
             {
                 x /= m;
                 y /= m;
@@ -132,8 +134,6 @@
         {
             return (this / Magnitude());
         }
-
-       
-
     }
 }
+
